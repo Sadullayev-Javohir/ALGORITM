@@ -2,15 +2,27 @@
 
 import math 
 
+# Tub sonni aniqlash uchun funksiya
+def tubsonCheck(num):
 
-def tubSonCheck(son):  
-    if son <= 1:
-        pass
-    for i in range(2, int(math.sqrt(son)) + 1):
-        if son % i == 0:
-            pass
-    return son
+    if num <= 1:
 
-number = int(input("Raqam kiriting: "))
+        return False
+
+    for i in range(2, int(num ** 0.5) + 1):
+
+        if num % i == 0:
+
+            return False
+    
+    return True
 
 
+number = int(input("Son kiriting: "))
+
+for i in range(1, number + 1):
+
+    if tubsonCheck(i) == True:
+
+        print(i)
+      
